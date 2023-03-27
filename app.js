@@ -37,7 +37,7 @@ app.use("/api/v1/jobs", auth , jobsRouter);
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
 
-app.use('trust proxy', 1);
+app.use('trust proxy', 1);  
 app.use(rateLimit ({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100 // limit each IP to 100 requests per windowMs
